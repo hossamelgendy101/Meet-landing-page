@@ -39,7 +39,7 @@ The design has three layouts (mobile, tablet and desktop), with a different set 
 ### Links
 
 - Solution URL: [Meet-landing-page](https://github.com/hossamelgendy101/Meet-landing-page)
-- Live site URL: [YOUR-LIVE-SITE](https://YOUR-LIVE-SITE-URL)
+- Live site URL: [YOUR-LIVE-SITE](https://meet-landing-page-jq5o.vercel.app/)
 
 ## My process
 
@@ -70,7 +70,9 @@ The design has three layouts (mobile, tablet and desktop), with a different set 
   background-image:
     url("../desktop/image-hero-left.png"),
     url("../desktop/image-hero-right.png");
-  background-position: left center, right center;
+  background-position:
+    left center,
+    right center;
   background-repeat: no-repeat, no-repeat;
 }
 ```
