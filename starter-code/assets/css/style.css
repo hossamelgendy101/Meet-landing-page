@@ -1,0 +1,315 @@
+:root {
+  --cyan-600:   #4D96A9;
+  --cyan-300:  #8FE3F9;
+  --purple-600: #855FB1;
+  --purple-300:   #D9B8FF;
+  --slate-300:  #D1D1DF;
+  --slate-900:  #28283D;
+  --slate-600:  #87879D;
+  --white:      #FFFFFF;
+}
+
+
+*, *::before, *::after { box-sizing: border-box; }
+h1,h2, p { margin: 0; }
+ul{list-style: none; padding: 0;margin: 0;}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+body{
+    align-items: center;
+    background-color: var(--white);
+    color: var(--slate-600);
+    font-family: "Red Hat Display", sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.chat-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 32px;
+    background-image: url("../tablet/image-hero.png");
+    background-repeat: no-repeat;
+    background-position-x: center ;
+    background-position-y: 120px;
+    background-size:115%;
+}
+
+.chat-header__title {
+  color: var(--slate-900);
+  line-height: 1.1;
+  font-size: clamp(2.5rem, 4vw + 1rem, 4rem); /* يكبر تدريجياً من 40px لـ 64px */
+  font-weight: 900;
+  max-width: 11ch; /* يلتزم بسطرين في أي مقاس */
+  margin-inline: auto;
+  margin-bottom: 8px;
+  padding-top: calc(120px + 42vw);
+}
+
+.chat-header__description {
+  font-size: clamp(1rem, 1.2vw + 0.5rem, 1.125rem);
+  line-height: 1.5;
+  font-weight: 400;
+  max-width: 44ch; /* يلتزم بحدود القراءة المريحة في كل المقاسات */
+  margin-inline: auto;
+  margin-bottom: 8px;
+}
+
+.chat-header__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.chat-header__button{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 40px;
+  border-radius: 29px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.5;
+  text-decoration: none;
+  gap: 6px;
+}
+
+
+.chat-header__button--primary{
+    background-color: var(--cyan-600);
+}
+.chat-header__version{
+    color: var(--cyan-300);
+}
+
+.chat-header__button--secondary{
+    background-color: var(--purple-600);
+}
+
+main{
+    border-top: 25px;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 32px 32px 0 32px;
+
+}
+
+.features__gallery{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: center;
+    gap: clamp(16px, 2.5vw, 24px);
+    padding: 64px 0;
+}
+
+.features__image{
+    border-radius: 8px;
+}
+
+.features__label{
+    color: var(--cyan-600);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.25rem;
+}
+
+.features__title {
+  color: var(--slate-900);
+  font-size: clamp(2rem, 3vw + 0.8rem, 2.5rem); 
+  font-weight: 900;
+  line-height: 1.1;
+  max-width: 17ch;
+  margin-inline: auto;
+  padding-bottom: 16px;
+}
+
+.features__text{
+    color: var(--slate-600);
+    padding-bottom: 64px;
+}
+
+.features__text,
+.cta__content {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 48ch; /* يمنع السطر إنه يطول بزيادة في الشاشات المتوسطة */
+  margin-inline: auto;
+}
+
+.cta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+    color: var(--white);
+    padding: 64px 32px;
+    background-image: linear-gradient(
+      rgba(77, 150, 168, 0.88), /* #4D96A9 بشفافية حوالي 88% */
+      rgba(77, 150, 168, 0.88)
+    ), url("../tablet/image-footer.jpg");
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+    color: #fafafa;
+}
+
+.cta__title {
+  font-size: clamp(2rem, 3vw + 0.8rem, 2.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  max-width: 20ch;
+  margin-inline: auto;
+}
+
+.cta__button{
+    background-color: var(--purple-600);
+}
+.cta__version{
+    color: var(--purple-300);
+}
+
+/* الحاوي الرئيسي عشان نظبط المحاذاة */
+.step-indicator {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* الخط اللي فوق الدايرة */
+.step-line {
+  width: 1px;             /* سمك الخط */
+  height: 80px;           /* طول الخط (تقدر تزوده أو تنقصه براحتك) */
+  background-color:var(--slate-300); /* لون الخط (رمادي فاتح) */
+}
+
+/* الدائرة اللي تحت الخط */
+.step-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;            /* عرض الدايرة */
+  height: 56px;           /* ارتفاع الدايرة (لازم يساوي العرض عشان تبقى دائرية تماماً) */
+  border: 2px solid #d1d5db; /* إطار الدايرة بنفس لون الخط */
+  border-radius: 50%;     /* دي اللي بتحول المربع لدائرة */
+  background-color: #fff;   /* خلفية الدايرة بيضاء عشان تفصل عن الخط وراها لو متقاطعين */
+  
+  /* تنسيق الرقم جوه الدايرة */
+  font-weight: 900;       /* Semibold */
+  font-size: 16px;
+  color: var(--slate-600);         /* لون الرقم */
+}
+
+.step-indicator-01{
+    margin-bottom: -32px;
+    margin-top: 32px;
+}
+
+.step-indicator-02{
+  margin-bottom: -28px;
+}
+
+
+@media (min-width: 768px) {
+    .features__gallery {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .chat-header__title{
+    font-size: 48px;
+    max-width: 10ch;
+  }
+  .chat-header{
+    background-size:105%;
+}
+.chat-header__buttons{
+    flex-direction: row;
+    gap: 17px;
+}
+.chat-header__description{
+    max-width: 40ch;
+}
+.features__gallery{
+    grid-template-columns: repeat(4, minmax(0, 152px));
+    gap: 24px;
+}
+
+.features__title{
+    font-size: 36px;
+    max-width: 17ch;
+}
+.features__text , .cta__content{
+    max-width: 47ch;
+}
+
+.cta__title{
+    font-size: 36px;
+}
+
+}
+
+@media (min-width: 1200px) {
+  .chat-header__title {
+  padding-top: 0;
+}
+.chat-header{
+    background-image:
+    url("../desktop/image-hero-left.png"),
+    url("../desktop/image-hero-right.png");
+
+  background-position:
+    left center,   
+    right center;  
+
+  background-size:
+    auto,          
+    auto;
+
+  background-repeat:
+    no-repeat,
+    no-repeat;
+}
+.features__title ,.cta__title{
+    font-size: 40px;
+    max-width: 15ch;
+}
+.features__text {
+    max-width: 45ch;
+}
+.cta{
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+    padding: 112px 5px ;
+    text-align: start;
+
+}
+.cta__content{
+    max-width: 30ch;
+}
+.cta__title {
+  margin-inline-start:160px;
+}
+.cta__button{
+    margin-inline-end:160px;
+}
+
+}
