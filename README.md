@@ -39,7 +39,7 @@ The design has three layouts (mobile, tablet and desktop), with a different set 
 ### Links
 
 - Solution URL: [Meet-landing-page](https://github.com/hossamelgendy101/Meet-landing-page)
-- Live site URL: [YOUR-LIVE-SITE](https://meet-landing-page-jq5o.vercel.app/)
+- Live site URL: [YOUR-LIVE-SITE](https://meet-landing-page-otk1.vercel.app/)
 
 ## My process
 
